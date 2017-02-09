@@ -8,7 +8,9 @@ echo "(b) Add a new record"
 echo "(c) Update a record"
 echo "(d) Remove a record"
 echo "(e) Quit"
-read find
+read choice
+
+
 
 
 
