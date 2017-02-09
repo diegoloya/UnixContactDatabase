@@ -12,4 +12,4 @@ read phone
 echo "Enter email: "
 read email
 
-echo "$name:$address:$phone:$email"> $file
+echo "$name:$address:$phone:$email" >> $file
