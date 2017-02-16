@@ -6,5 +6,9 @@ file="file.txt"
 echo -n "Pick an entry to delete: "
 read deleteName
 
+grep -v deleteName file > tempfile.txt
+
+mv tempfile.txt file.txt
+
 
 
