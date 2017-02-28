@@ -10,7 +10,8 @@ do
 	echo "(b) Add a new record"
 	echo "(c) Update a record"
 	echo "(d) Remove a record"
-	echo "(e) Quit"
+	echo "(e) Show all records"
+	echo "(f) Quit"
 	read choice
 
 	if [ "$choice" = "a" ]
@@ -25,8 +26,14 @@ do
 	elif [ "$choice" = "d" ] 
 	then
 		./remove.sh
-	elif [ "$choice" = "e" ]
+	elif [ "$choice" = "e" ] 
+	then
+		./listcat.sh
+	elif [ "$choice" = "f" ]
 	then 
+		echo
+		echo "Quitting program."
+		echo
 		exit=1
 	else
 		echo "Error: Please select from the given options."
