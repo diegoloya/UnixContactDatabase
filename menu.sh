@@ -1,5 +1,11 @@
 #!/bin/sh
 
+#Group members:
+#Diego Loya
+#Collin Weir
+#Forrest Cross
+#Michael Robertson
+
 #Display menu and execute corresponding command
 exit=0
 

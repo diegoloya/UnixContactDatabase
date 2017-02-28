@@ -1,24 +1,39 @@
 #!/bin/sh
-#This works for most cases
-#Sucessfully removes single entries
-#First we ask the user which entry they want to delete
+#Mike Robertson
+#Spring 2017
+
 echo "Search for an entry to delete: "
 read deleteName
 
-grep "$deleteName" file.txt
-
-echo "Is this the entry you want to delete? Y or N"
-read choice
-
-if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; 
-then	
-	grep -v "$deleteName" file.txt > tempfile.txt
+matchnum=$(grep -ic "$deleteName" file.txt) 
+if [[ $matchnum == 0 ]]
+then 
+	echo "No entries found"
+	exit 
+elif [[ $matchnum > 1 ]]
+then
+	echo "$(grep -i "$deleteName" file.txt)"
+	read -p "Repeated Entries found, Enter Email: " fmatch;
+	grep -v "$fmatch" file.txt > tempfile.txt
 	mv tempfile.txt file.txt
 	echo "Entry removed!"
-
+	
 else
-	echo "File not removed!"
-	exit 0
+	grep -i "$deleteName" file.txt
+	echo "Is this the entry you want to delete? Y or N"
+    read choice
+		
+	if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; 
+    then
+		grep -vi "$deleteName" file.txt > tempfile.txt
+		mv tempfile.txt file.txt
+		echo "Entry removed!"
+		
+	else
+		echo "File not removed!"
+		
+	fi
+
 
 fi
 

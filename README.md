@@ -1,11 +1,6 @@
-Hello this is a group project for Gu's unix class.
+Hello this is a group project for Dr. Gu's unix class.
 
-Diego added this. 
+The database is text-based and stores the information about your contacts.
 
+To start, run ./menu.sh  
 
-lame
-
-Forrest can add to this
-
-
-lipsum est quantum duo teracci
