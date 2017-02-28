@@ -1,4 +1,4 @@
-Diego:987 asdf:817061:dd@as089.com
+Diego:1234 university dr:5123334455:diego@hotmail.com
 Mike:135 Pheasant:9299249:mar395@txstate.edu
 Forest:729 Ridge:8675309:forest@gmail.com
 Smokey:890 Mountain:2453518:bear@gmail.com
